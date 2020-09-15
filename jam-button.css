@@ -1,0 +1,126 @@
+/* lato-300 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Lato Light'), local('Lato-Light'),
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-300.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Lato Regular'), local('Lato-Regular'),
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Lato Bold'), local('Lato-Bold'),
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+.jam-button {
+    font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+    color: white;
+    display: inline-block;
+    background: #3498DB;
+    padding: 0 15px;
+    border-radius: 5px;
+    height: 36px;
+    text-decoration: none;
+}
+
+.jam-button:active {
+    background-color: #2A79B0;
+    transform: scale(.99);
+}
+
+.jam-btn-logo {
+    float: left;
+}
+
+.jam-btn-logo img {
+    height: 24px;
+    margin-top: 6px;
+}
+
+.jam-btn-text {
+    margin-left: 30px;
+    line-height: 36px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.jam-btn-brand {
+    font-family: "Lato", "Helvetica Neue", Verdana, sans-serif;
+}
+
+.jam-btn-bold {
+    font-weight: 700;
+}
+
+.jam-btn-thin {
+    font-weight: 300;
+}
+
+/** LARGE **/
+
+.jam-button.large {
+    height: 50px;
+    padding: 0 20px;
+}
+
+.jam-button.large .jam-btn-logo img {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.jam-button.large .jam-btn-text {
+    line-height: 50px;
+}
+
+/** SMALL **/
+
+.jam-button.small {
+    height: 20px;
+    padding: 0 8px;
+    border-radius: 3px;
+}
+
+.jam-button.small .jam-btn-logo img {
+    height: 16px;
+    margin-top: 2px;
+}
+
+.jam-button.small .jam-btn-text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 18px;
+}
+
+/** ROUNDED **/
+
+.jam-button.rounded {
+    border-radius: 50vh;
+}
