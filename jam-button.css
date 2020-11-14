@@ -40,87 +40,115 @@
     url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
-.jam-button {
-    font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
-    color: white;
-    display: inline-block;
-    background: #3498DB;
-    padding: 0 15px;
-    border-radius: 5px;
-    height: 36px;
-    text-decoration: none;
+.jam-button div,
+.jam-button span,
+.jam-button img {
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    border: none !important;
+}
+
+.jam-button div {
+    display: block !important;
+}
+
+.jam-button span {
+    display: inline !important;
+}
+
+.jam-button img {
+    display: inline !important;
+}
+
+.jam-button,
+.jam-button:hover,
+.jam-button:active {
+    font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif !important;
+    color: white !important;
+    display: inline-block !important;
+    background: #3498DB !important;
+    padding: 0 15px !important;
+    border-radius: 5px !important;
+    height: 36px !important;
+    text-decoration: none !important;
+    transition: none !important;
+    transition-duration: 0s !important;
 }
 
 .jam-button:active {
-    background-color: #2A79B0;
-    transform: scale(.99);
+    background-color: #2A79B0 !important;
+    transform: scale(.99) !important;
 }
 
-.jam-btn-logo {
-    float: left;
+.jam-button .jam-btn-logo {
+    float: left !important;
 }
 
-.jam-btn-logo img {
-    height: 24px;
-    margin-top: 6px;
+.jam-button .jam-btn-logo img {
+    height: 24px !important;
+    margin-top: 6px !important;
 }
 
-.jam-btn-text {
-    margin-left: 30px;
-    line-height: 36px;
-    font-size: 15px;
-    font-weight: 300;
+.jam-button .jam-btn-text {
+    margin-left: 30px !important;
+    line-height: 36px !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
 }
 
-.jam-btn-brand {
-    font-family: "Lato", "Helvetica Neue", Verdana, sans-serif;
+.jam-button .jam-btn-text .jam-btn-brand {
+    font-family: "Lato", "Helvetica Neue", Verdana, sans-serif !important;
 }
 
-.jam-btn-bold {
-    font-weight: 700;
+.jam-button .jam-btn-text .jam-btn-brand .jam-btn-bold {
+    font-weight: 700 !important;
 }
 
-.jam-btn-thin {
-    font-weight: 300;
+.jam-button .jam-btn-text .jam-btn-brand .jam-btn-thin {
+    font-weight: 300 !important;
 }
 
 /** LARGE **/
 
 .jam-button.large {
-    height: 50px;
-    padding: 0 20px;
+    height: 50px !important;
+    padding: 0 20px !important;
 }
 
 .jam-button.large .jam-btn-logo img {
-    height: 30px;
-    margin-top: 10px;
+    height: 30px !important;
+    margin-top: 10px !important;
 }
 
 .jam-button.large .jam-btn-text {
-    line-height: 50px;
+    line-height: 50px !important;
 }
 
 /** SMALL **/
 
 .jam-button.small {
-    height: 20px;
-    padding: 0 8px;
-    border-radius: 3px;
+    height: 20px !important;
+    padding: 0 8px !important;
+    border-radius: 3px !important;
 }
 
 .jam-button.small .jam-btn-logo img {
-    height: 16px;
-    margin-top: 2px;
+    height: 16px !important;
+    margin-top: 2px !important;
 }
 
 .jam-button.small .jam-btn-text {
-    font-size: 12px;
-    line-height: 20px;
-    margin-left: 18px;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin-left: 18px !important;
 }
 
 /** ROUNDED **/
 
 .jam-button.rounded {
-    border-radius: 50vh;
+    border-radius: 50vh !important;
 }
