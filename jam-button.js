@@ -1,10 +1,16 @@
+/**
+ * JustAuthMe Login button SDK
+ * Author: Peter Cauty
+ * Release date: 2020-02-17
+ * License: MIT
+ */
+
 const button_html = (size, lang, shape, app_id, callback) => {
-    size = size || 'regular';
     lang = lang || '';
-    shape = shape || 'squared';
 
     if (lang === '') {
         lang = navigator.language || navigator.userLanguage;
+        lang = lang.substr(0, 2).toLowerCase();
     }
 
     const sizes = {
@@ -20,6 +26,16 @@ const button_html = (size, lang, shape, app_id, callback) => {
         'squared': '',
         'rounded': 'jam-btn-rounded'
     };
+
+    if (!(size in sizes)) {
+        size = 'regular';
+    }
+    if (!(lang in langs)) {
+        lang = 'en';
+    }
+    if (!(shape in shapes)) {
+        shape = 'squared';
+    }
 
     const t = (lang, param) => {
         const strings = {
