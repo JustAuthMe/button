@@ -6,13 +6,6 @@
  */
 
 const button_html = (size, lang, shape, app_id, callback) => {
-    lang = lang || '';
-
-    if (lang === '') {
-        lang = navigator.language || navigator.userLanguage;
-        lang = lang.substr(0, 2).toLowerCase();
-    }
-
     const sizes = {
         'regular': '',
         'small': 'jam-btn-small',
@@ -27,11 +20,17 @@ const button_html = (size, lang, shape, app_id, callback) => {
         'rounded': 'jam-btn-rounded'
     };
 
+    lang = lang || '';
+    if (lang === '' || !(lang in langs)) {
+        lang = navigator.language || navigator.userLanguage;
+        lang = lang.substr(0, 2).toLowerCase();
+
+        if (!(lang in langs)) {
+            lang = 'en';
+        }
+    }
     if (!(size in sizes)) {
         size = 'regular';
-    }
-    if (!(lang in langs)) {
-        lang = 'en';
     }
     if (!(shape in shapes)) {
         shape = 'squared';
