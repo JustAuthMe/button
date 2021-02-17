@@ -40,9 +40,13 @@
     url('https://static.justauth.me/medias/fonts/lato-v16-latin/lato-v16-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
-.jam-button div,
-.jam-button span,
-.jam-button img {
+.jam-button {
+    display: inline;
+}
+
+.jam-btn div,
+.jam-btn span,
+.jam-btn img {
     margin: 0 !important;
     padding: 0 !important;
     float: none !important;
@@ -52,21 +56,21 @@
     border: none !important;
 }
 
-.jam-button div {
+.jam-btn div {
     display: block !important;
 }
 
-.jam-button span {
+.jam-btn span {
     display: inline !important;
 }
 
-.jam-button img {
+.jam-btn img {
     display: inline !important;
 }
 
-.jam-button,
-.jam-button:hover,
-.jam-button:active {
+.jam-btn,
+.jam-btn:hover,
+.jam-btn:active {
     font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif !important;
     color: white !important;
     display: inline-block !important;
@@ -79,69 +83,69 @@
     transition-duration: 0s !important;
 }
 
-.jam-button:active {
+.jam-btn:active {
     background-color: #2A79B0 !important;
     transform: scale(.99) !important;
 }
 
-.jam-button .jam-btn-logo {
+.jam-btn .jam-btn-logo {
     float: left !important;
 }
 
-.jam-button .jam-btn-logo img {
+.jam-btn .jam-btn-logo img {
     height: 24px !important;
     margin-top: 6px !important;
 }
 
-.jam-button .jam-btn-text {
+.jam-btn .jam-btn-text {
     margin-left: 30px !important;
     line-height: 36px !important;
     font-size: 15px !important;
     font-weight: 300 !important;
 }
 
-.jam-button .jam-btn-text .jam-btn-brand {
+.jam-btn .jam-btn-text .jam-btn-brand {
     font-family: "Lato", "Helvetica Neue", Verdana, sans-serif !important;
 }
 
-.jam-button .jam-btn-text .jam-btn-brand .jam-btn-bold {
+.jam-btn .jam-btn-text .jam-btn-brand .jam-btn-bold {
     font-weight: 700 !important;
 }
 
-.jam-button .jam-btn-text .jam-btn-brand .jam-btn-thin {
+.jam-btn .jam-btn-text .jam-btn-brand .jam-btn-thin {
     font-weight: 300 !important;
 }
 
 /** LARGE **/
 
-.jam-button.large {
+.jam-btn.jam-btn-large {
     height: 50px !important;
     padding: 0 20px !important;
 }
 
-.jam-button.large .jam-btn-logo img {
+.jam-btn.jam-btn-large .jam-btn-logo img {
     height: 30px !important;
     margin-top: 10px !important;
 }
 
-.jam-button.large .jam-btn-text {
+.jam-btn.jam-btn-large .jam-btn-text {
     line-height: 50px !important;
 }
 
 /** SMALL **/
 
-.jam-button.small {
+.jam-btn.jam-btn-small {
     height: 20px !important;
     padding: 0 8px !important;
     border-radius: 3px !important;
 }
 
-.jam-button.small .jam-btn-logo img {
+.jam-btn.jam-btn-small .jam-btn-logo img {
     height: 16px !important;
     margin-top: 2px !important;
 }
 
-.jam-button.small .jam-btn-text {
+.jam-btn.jam-btn-small .jam-btn-text {
     font-size: 12px !important;
     line-height: 20px !important;
     margin-left: 18px !important;
@@ -149,6 +153,6 @@
 
 /** ROUNDED **/
 
-.jam-button.rounded {
+.jam-btn.jam-btn-rounded {
     border-radius: 50vh !important;
 }
