@@ -5,7 +5,7 @@
  * License: MIT
  */
 
-const button_html = (size, lang, shape, app_id, callback) => {
+const justauthme_button_html = (size, lang, shape, app_id, callback) => {
     const sizes = {
         'regular': '',
         'small': 'jam-btn-small',
@@ -75,5 +75,5 @@ for (let i = 0; i < buttons.length; i++) {
     const app_id = buttons[i].getAttribute('data-app-id');
     const callback = buttons[i].getAttribute('data-callback');
 
-    buttons[i].innerHTML = button_html(size, lang, shape, app_id, callback);
+    buttons[i].innerHTML = justauthme_button_html(size, lang, shape, app_id, callback);
 }
