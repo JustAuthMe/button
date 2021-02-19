@@ -5,9 +5,38 @@
     <title>JustAuthMe button demo page</title>
 </head>
 <body>
-    <div class="jam-button"
+    <h2>Test button</h2>
+    <div class="jam-button" id="jam-button"
         data-app-id="azerty"
         data-callback="http://localhost/"></div>
+
+    <h2>Generator</h2>
+    <h4>Size</h4>
+    <input type="radio" name="size" id="size_small"
+        onclick="document.querySelector('#jam-button').setAttribute('data-size', 'small');justauthme_render_buttons();" />
+    <label for="size_small">Small</label>
+    <input type="radio" name="size" id="size_regular" checked
+        onclick="document.querySelector('#jam-button').setAttribute('data-size', 'regular');justauthme_render_buttons();" />
+    <label for="size_regular">Regular</label>
+    <input type="radio" name="size" id="size_large"
+           onclick="document.querySelector('#jam-button').setAttribute('data-size', 'large');justauthme_render_buttons();" />
+    <label for="size_large">Large</label>
+
+    <h4>Shape</h4>
+    <input type="radio" name="shape" id="shape_squared" checked
+        onclick="document.querySelector('#jam-button').setAttribute('data-shape', 'squared');justauthme_render_buttons();" />
+    <label for="shape_squared">Squared</label>
+    <input type="radio" name="shape" id="shape_rounded"
+        onclick="document.querySelector('#jam-button').setAttribute('data-shape', 'rounded');justauthme_render_buttons();" />
+    <label for="shape_rounded">Rounded</label>
+
+    <h4>Language</h4>
+    <input type="radio" name="lang" id="lang_fr" checked
+           onclick="document.querySelector('#jam-button').setAttribute('data-lang', 'fr');justauthme_render_buttons();" />
+    <label for="lang_fr">Français</label>
+    <input type="radio" name="lang" id="lang_en"
+           onclick="document.querySelector('#jam-button').setAttribute('data-lang', 'en');justauthme_render_buttons();" />
+    <label for="lang_en">English</label>
 
     <script type="text/javascript" src="jam-button.js"></script>
 </body>

@@ -67,13 +67,17 @@ link.type = 'text/css';
 link.href = 'https://static.justauth.me/medias/jam-button-v2.css';
 header.appendChild(link);
 
-const buttons = document.getElementsByClassName('jam-button');
-for (let i = 0; i < buttons.length; i++) {
-    const size = buttons[i].getAttribute('data-size');
-    const lang = buttons[i].getAttribute('data-lang');
-    const shape = buttons[i].getAttribute('data-shape');
-    const app_id = buttons[i].getAttribute('data-app-id');
-    const callback = buttons[i].getAttribute('data-callback');
+const justauthme_render_buttons = () => {
+    const buttons = document.getElementsByClassName('jam-button');
+    for (let i = 0; i < buttons.length; i++) {
+        const size = buttons[i].getAttribute('data-size');
+        const lang = buttons[i].getAttribute('data-lang');
+        const shape = buttons[i].getAttribute('data-shape');
+        const app_id = buttons[i].getAttribute('data-app-id');
+        const callback = buttons[i].getAttribute('data-callback');
 
-    buttons[i].innerHTML = justauthme_button_html(size, lang, shape, app_id, callback);
-}
+        buttons[i].innerHTML = justauthme_button_html(size, lang, shape, app_id, callback);
+    }
+};
+
+justauthme_render_buttons();
