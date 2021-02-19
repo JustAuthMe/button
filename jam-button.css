@@ -67,10 +67,7 @@
     display: block !important;
 }
 
-.jam-btn span {
-    display: inline !important;
-}
-
+.jam-btn span,
 .jam-btn img {
     display: inline !important;
 }
@@ -88,6 +85,16 @@
     text-decoration: none !important;
     transition: none !important;
     transition-duration: 0s !important;
+}
+
+.jam-btn::before,
+.jam-btn:hover::before,
+.jam-btn:active::before,
+.jam-btn::after,
+.jam-btn:hover::after,
+.jam-btn.active::after {
+    content: none !important;
+    display: none !important;
 }
 
 .jam-btn:active {
