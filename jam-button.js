@@ -6,6 +6,10 @@
  */
 
 const justauthme_button_html = (size, lang, shape, app_id, callback) => {
+    if (app_id === null || callback === null) {
+        return '<pre>JustAuthMe button error: missing app ID or callback URL</pre>';
+    }
+
     const sizes = {
         'regular': '',
         'small': 'jam-btn-small',

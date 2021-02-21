@@ -6,38 +6,70 @@
 </head>
 <body>
     <h2>Test button</h2>
-    <div class="jam-button" id="jam-button"
-        data-app-id="azerty"
-        data-callback="http://localhost/"></div>
+    <div class="jam-button" style="display:block;height:50px;" id="jam-button"
+        data-app-id="jam_demo"
+        data-callback="https://demo.justauth.me/auth/jam"></div>
 
     <h2>Generator</h2>
-    <h4>Size</h4>
-    <input type="radio" name="size" id="size_small"
-        onclick="document.querySelector('#jam-button').setAttribute('data-size', 'small');justauthme_render_buttons();" />
-    <label for="size_small">Small</label>
-    <input type="radio" name="size" id="size_regular" checked
-        onclick="document.querySelector('#jam-button').setAttribute('data-size', 'regular');justauthme_render_buttons();" />
-    <label for="size_regular">Regular</label>
-    <input type="radio" name="size" id="size_large"
-           onclick="document.querySelector('#jam-button').setAttribute('data-size', 'large');justauthme_render_buttons();" />
-    <label for="size_large">Large</label>
+    <select onchange="button.update('size', this.value)">
+        <option value="small">Petit</option>
+        <option value="regular" selected>Moyen</option>
+        <option value="large">Grand</option>
+    </select>
+    <select onchange="button.update('shape', this.value)">
+        <option value="squared" selected>Rectangulaire</option>
+        <option value="rounded">Arrondi</option>
+    </select>
+    <select onchange="button.update('lang', this.value)">
+        <option value="fr" selected>Français</option>
+        <option value="en">Anglais</option>
+    </select>
+    <br />
+    <button type="button" onclick="button.getCode()">Copier</button>
 
-    <h4>Shape</h4>
-    <input type="radio" name="shape" id="shape_squared" checked
-        onclick="document.querySelector('#jam-button').setAttribute('data-shape', 'squared');justauthme_render_buttons();" />
-    <label for="shape_squared">Squared</label>
-    <input type="radio" name="shape" id="shape_rounded"
-        onclick="document.querySelector('#jam-button').setAttribute('data-shape', 'rounded');justauthme_render_buttons();" />
-    <label for="shape_rounded">Rounded</label>
+    <pre class="language-html"><code id="button_code" class="language-html"></code></pre>
 
-    <h4>Language</h4>
-    <input type="radio" name="lang" id="lang_fr" checked
-           onclick="document.querySelector('#jam-button').setAttribute('data-lang', 'fr');justauthme_render_buttons();" />
-    <label for="lang_fr">Français</label>
-    <input type="radio" name="lang" id="lang_en"
-           onclick="document.querySelector('#jam-button').setAttribute('data-lang', 'en');justauthme_render_buttons();" />
-    <label for="lang_en">English</label>
+    <script type="text/javascript">
+        const button = {
+            size: 'regular',
+            shape: 'squared',
+            lang: 'fr',
+            getCode: () => {
+                const text2copy = document.getElementById('button_code').innerText;
 
+                const el = document.createElement('textarea');
+                el.value = text2copy;
+                el.setAttribute('readonly', '');
+                el.style.position = 'absolute';
+                el.style.left = '-9999px';
+                document.body.appendChild(el);
+                el.select();
+                el.setSelectionRange(0, 99999);
+                document.execCommand('copy');
+                document.body.removeChild(el);
+
+                alert('Code copié dans le presse-papier !');
+            },
+            renderCode: () => {
+                document.getElementById('button_code').innerHTML =
+                    '&lt;div class="jam-button"\n' +
+                    '    data-size="' + button.size + '"\n' +
+                    '    data-shape="' + button.shape + '"\n' +
+                    '    data-lang="' + button.lang + '"\n' +
+                    '    data-app-id="VOTRE ID D\'APP"\n' +
+                    '    data-callback="VOTRE URL DE REDIRECTION"&gt;\n' +
+                    '&lt;/div&gt;';
+            },
+            update: (attribute, value) => {
+                button[attribute] = value;
+                document.querySelector('#jam-button').setAttribute('data-' + attribute, button[attribute]);
+                button.renderCode();
+                justauthme_render_buttons();
+            }
+        };
+
+        button.renderCode();
+    </script>
     <script type="text/javascript" src="jam-button.js"></script>
 </body>
 </html>
