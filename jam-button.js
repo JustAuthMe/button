@@ -42,8 +42,8 @@ const justauthme_button_html = (size, lang, shape, app_id, callback) => {
 
     const t = (lang, param) => {
         const strings = {
-            'en': 'Login with %s',
-            'fr': 'Connexion avec %s'
+            'en': '<span class="jam-btn-label">Login with</span> %s',
+            'fr': '<span class="jam-btn-label">Connexion avec</span> %s'
         };
 
         return strings[lang].replace('%s', param);
@@ -68,7 +68,7 @@ const header = document.getElementsByTagName('head')[0];
 const link = document.createElement('link');
 link.rel = 'stylesheet';
 link.type = 'text/css';
-link.href = 'https://static.justauth.me/medias/jam-button-v2.css';
+link.href = './jam-button.css';
 header.appendChild(link);
 
 const justauthme_render_buttons = () => {

@@ -170,3 +170,11 @@
 .jam-btn.jam-btn-rounded {
     border-radius: 50vh !important;
 }
+
+/** MEDIA QUERIES **/
+
+@media (max-width: 375px) {
+    .jam-btn .jam-btn-text .jam-btn-label {
+        display: none !important;
+    }
+}
